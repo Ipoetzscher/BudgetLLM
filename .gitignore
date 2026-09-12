@@ -1,0 +1,14 @@
+# Local environment and private financial data
+.venv/
+.env
+memory.json
+db.sqlite3
+*.csv
+
+# Python-generated files
+__pycache__/
+.pytest_cache/
+*.pyc
+
+# macOS-generated files
+.DS_Store

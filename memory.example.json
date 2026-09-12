@@ -1,0 +1,10 @@
+{
+    "EXAMPLE COFFEE SHOP": {
+        "categories": ["F&B"],
+        "ambiguous": false
+    },
+    "EXAMPLE MARKETPLACE": {
+        "categories": ["Goods", "Other"],
+        "ambiguous": true
+    }
+}
