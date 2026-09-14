@@ -1,3 +1,6 @@
 streamlit
 openai
 st-copy
+requests
+Django
+djangorestframework

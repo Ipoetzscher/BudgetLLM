@@ -44,6 +44,8 @@ def process_chase_csv(file, start_id=1):
         transaction["date"] = date
         transaction["merchant"] = merchant
         merchant_normalized, prefix = normalize_merchant(merchant, transaction["account"])
+        if not merchant_normalized:
+            merchant_normalized = "UNKNOWN MERCHANT"
         transaction["merchant_normalized"] = merchant_normalized
         transaction["prefix"] = prefix
         transaction["total"] = float(amt)
@@ -66,6 +68,8 @@ def process_wells_fargo_csv(file, start_id=1):
     for row in reader:
         date = row["DATE"]
         merchant, prefix = normalize_merchant(row["DESCRIPTION"], "WF")
+        if not merchant:
+            merchant = "UNKNOWN MERCHANT"
 
         transaction = {}
         transaction["id"] = count
